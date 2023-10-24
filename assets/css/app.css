@@ -1,0 +1,105 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@font-face {
+  font-family: 'NexaBold';
+  src: url('../fonts/NexaDemo-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NexaLight';
+  src: url('../fonts/NexaDemo-Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Additional styling for elements using your custom font */
+h1, h2, h3, h4, h5, p, span, b, strong, li, ul, ol {
+  font-family: 'NexaLight', sans-serif;
+  /* Use the font-family name defined above */
+}
+
+* {
+  image-rendering: -webkit-optimize-contrast;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: auto;
+}
+
+*::selection {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.button-appearance-none {
+  display: flex;
+  height: auto;
+  background: transparent;
+  padding: 0;
+}
+
+.button-appearance-none:hover {
+  background: transparent !important;
+}
+
+.full-w-inputs *:not(i, button) {
+  width: 100%;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 6px;
+  position: absolute;
+}
+
+/* Track */
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 6px;
+}
+
+/* Handle */
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgb(255, 255, 255, 0.2);
+  border: 0px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+  border-radius: 9999px;
+  border-radius: 6px;
+}
+
+/* Handle on hover */
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgb(255, 255, 255, 0.2);
+  border: 0px solid rgb(0, 0, 0, 0);
+  background-clip: padding-box;
+  border-radius: 9999px;
+  border-radius: 6px;
+}
+
+/* Scrollbar Dark */
+
+/* Handle */
+.dark-scroll::-webkit-scrollbar-thumb {
+  background: rgb(0, 0, 0, 0.2);
+}
+
+/* Handle on hover */
+.dark-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgb(0, 0, 0, 0.2);
+}
+
+/* This file is for your main application CSS */
